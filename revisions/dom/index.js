@@ -6,6 +6,15 @@ const clear = document.querySelector("#clear");
 const tasks = ["", "Coder en C++", "Coder en Python", "Faire les courses"];
 console.log(tasks);
 
+tasks.length
+
+let taskCount = 0;
+
+const htmlCount = document.querySelector("#task-count");
+htmlCount.textContent = taskCount;
+
+// Implémenter un observer
+
 function taskToDom(task) {
   if (task && typeof task === "string") {
     const li = document.createElement("li");
