@@ -1,4 +1,4 @@
-const h1 = document.querySelector("#input");
+const input = document.querySelector("#input");
 const ul = document.querySelector("#list");
 const add = document.querySelector("#add");
 const clear = document.querySelector("#clear");
@@ -27,9 +27,20 @@ tasks.forEach((task) => {
   taskToDom(task);
 });
 
-// Ajouter des tâches
-  // Soit en cliquant sur ADD soit avec la touche entrée dans l'input text
-  // Vider l'input et (ux) remettre le focus dans l'input text
+clear.addEventListener("click", () => {
+  ul.innerHTML = "";
+});
 
-// Clear
-  // Supprime toutes les tâches
+function addTask() {
+  taskToDom(input.value);
+  input.value = "";
+  input.focus();
+}
+
+add.addEventListener("click", () => addTask());
+
+input.addEventListener("keydown", (event) => {
+  if (event.key === "Enter") {
+    addTask();
+  }
+});
