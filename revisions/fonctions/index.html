@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
+
+    <!-- <script src="index.js" defer></script> -->
+  </head>
+  <body>
+    <h1></h1>
+
+    <script>
+      // const h1 = document.querySelector("h1");
+      // h1.textContent = "Hello world !";
+
+      // Fonction "classique"
+      function addition(a, b) {
+        return a + b;
+      }
+
+      let res = addition(10, 99);
+
+      // Objet littéral (JSON)
+      console.log({ res });
+
+      // IIFE (II(A)FE)
+      // const r = (function (a, b) {
+      //   return a + b;
+      // }(12, 16));
+      // console.log(r);
+
+      function afficher_alerte() {
+        console.log("Coucou");
+      }
+      
+      // Callback
+      setTimeout(afficher_alerte, 1000);
+
+
+      let message = "Coucou (anonyme)";
+
+      const uniqueID = setTimeout(() => {
+        console.log(message);
+      }, 3000);
+      clearTimeout(uniqueID);
+
+      // Stored anonymous function
+      const f = () => {
+        console.log("Fonction typique fwk JS");
+      }
+      f()
+
+      // setTimeout(() => {
+      //   alert("ACHETEZ !!!")
+      // }, 3000)
+    </script>
+  </body>
+</html>

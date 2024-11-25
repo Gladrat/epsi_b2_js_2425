@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1></h1>
+    <input type="text" />
+    <button>ADD</button>
+    <ul></ul>
+
+    <script>
+      const h1 = document.querySelector("h1");
+      const ul = document.querySelector("ul");
+
+      setTimeout(() => {
+        h1.textContent = "Task manager";
+      }, 1000);
+
+      setTimeout(() => {
+        h1.style.backgroundColor = "salmon";
+        h1.style.color = "white";
+        h1.style.textAlign = "center";
+      }, 2000);
+
+      setTimeout(() => {
+        const tasks = ["Coder en C++", "Coder en Python", "Faire les courses"];
+        tasks.forEach((el) => {
+          const li = document.createElement("li");
+          li.textContent = el;
+
+          const remove = document.createElement("button");
+          remove.textContent = "X";
+
+          remove.addEventListener("click", (event) => {
+            li.remove();
+          });
+
+          li.append(remove);
+
+          ul.append(li);
+        });
+      }, 3000);
+
+      const button = document.querySelector("button");
+      input.addEventListener("click", (event) => {
+        console.log("Ajouter une tâche:", input.value);
+        // Vider le contenu du input
+      });
+
+      // const input = document.querySelector("input");
+      // input.addEventListener("keydown", (event) => {
+      //   if (event.key == "Enter") {
+      //     console.log("Ajouter une tâche:", input.value);
+      //   }
+      // });
+      
+    </script>
+  </body>
+</html>
