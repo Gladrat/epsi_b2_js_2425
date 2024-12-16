@@ -1,6 +1,7 @@
 import { render, createElement } from "./framework/core.js";
 
-import { pizzaList } from "./components/pizzaList.js";
+import { PizzaList } from "./components/pizzaList.js";
+import { Navigation } from "./components/navigation.js";
 
 const state = {
   title: "pizza world!",
@@ -12,13 +13,14 @@ const state = {
 
 const app = createElement(
   "app",
+  Navigation,
   createElement("h1", `Hello ${state.title}`),
   createElement("p", "Carte des pizzas :"),
-  pizzaList,
+  PizzaList,
   createElement("button", "Click-me!"),
 );
 
-console.log(app);
-console.log(JSON.stringify(app));
+// console.log(app);
+// console.log(JSON.stringify(app));
 
 render(app, document.querySelector("#root"));

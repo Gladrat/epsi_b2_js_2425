@@ -6,7 +6,7 @@ export function createElement(tag, ...children) {
 // template : Code HTML
 // container : Emplacement sur la page
 export function render(vNode, container) {
-  console.log({ vNode });
+  // console.log({ vNode });
 
   if (typeof vNode === "string" || typeof vNode === "number") {
     container.appendChild(document.createTextNode(vNode));

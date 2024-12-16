@@ -1,6 +1,6 @@
 import { createElement } from "../framework/core.js";
 
-export const pizzaList = createElement(
+export const PizzaList = createElement(
   "ul",
   createElement("li", "Pizza spéciale"),
   createElement("li", "Pizza reine"),
