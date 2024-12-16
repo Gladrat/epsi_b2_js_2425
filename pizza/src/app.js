@@ -13,11 +13,12 @@ const state = {
 
 const app = createElement(
   "app",
+  null,
   Navigation,
-  createElement("h1", `Hello ${state.title}`),
-  createElement("p", "Carte des pizzas :"),
+  createElement("h1", null, `Hello ${state.title}`),
+  createElement("p", null, "Carte des pizzas :"),
   PizzaList,
-  createElement("button", "Click-me!"),
+  createElement("button", null, "Click-me!"),
 );
 
 // console.log(app);
