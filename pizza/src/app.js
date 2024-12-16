@@ -8,8 +8,8 @@ const state = {
 };
 
 // Modifier la navigation
-  // Pour en faire un composant
-  // Dans son propre fichier
+// Pour en faire un composant
+// Dans son propre fichier
 
 const app = createElement(
   "app",
