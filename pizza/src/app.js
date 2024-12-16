@@ -18,7 +18,14 @@ const app = createElement(
   createElement("h1", null, `Hello ${state.title}`),
   createElement("p", null, "Carte des pizzas :"),
   PizzaList,
-  createElement("button", null, "Click-me!"),
+  createElement(
+    "button", {
+      onclick: () => {
+        alert("clicked");
+      }
+    }, 
+    "Click-me!"
+  ),
 );
 
 // console.log(app);
