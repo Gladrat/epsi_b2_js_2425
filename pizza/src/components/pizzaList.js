@@ -6,24 +6,26 @@ const pizzasDatas = [
   "Pizza chorizo",
   "Pizza 4 fromages",
   "Pizza poulet",
+  "Pizza montagnarde",
 ];
 
-export const pizzas = pizzasDatas.map((pizza) =>
-  createElement(
-    "li",
-    null,
-    pizza,
-    " ",
+const pizzas = pizzasDatas.map((pizza) =>
     createElement(
-      "button",
-      {
-        onclick: () => {
-          console.log(pizza);
+      "li",
+      null,
+      pizza,
+      " ",
+      createElement(
+        "button",
+        {
+          onclick: () => {
+            state.pizzaCount++;
+            state.pizzaSelection = [...state.pizzaSelection, pizza];
+          },
         },
-      },
-      "+"
+        "+"
+      )
     )
-  )
-);
+  );
 
-export const PizzaList = createElement("ul", null, ...pizzas);
+  export const PizzaList = createElement("ul", null, ...pizzas);
