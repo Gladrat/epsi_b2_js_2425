@@ -6,6 +6,16 @@ export function createElement(tag, props = {}, ...children) {
   };
 }
 
+export function reactive(state, callbackFn) {
+  return new Proxy(state, {
+    set(target, key, value) {
+      target[key] = value;
+      callbackFn();
+      return true;
+    }
+  })
+}
+
 export function render(vNode, container) {
   // console.log({ vNode });
 

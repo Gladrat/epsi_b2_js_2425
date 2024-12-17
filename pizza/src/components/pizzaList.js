@@ -1,68 +1,29 @@
 import { createElement } from "../framework/core.js";
 
-// Ajouter un bouton "Commander" sur chaque pizza
-// Ajouter un événement -> console.log("pizza") lors du click
+const pizzasDatas = [
+  "Pizza spéciale",
+  "Pizza reine",
+  "Pizza chorizo",
+  "Pizza 4 fromages",
+  "Pizza poulet",
+];
 
-export const PizzaList = createElement(
-  "ul",
+export const pizzas = pizzasDatas.map((pizza) =>
   createElement(
     "li",
     null,
-    "Pizza spéciale",
+    pizza,
     " ",
     createElement(
       "button",
       {
         onclick: () => {
-          console.log("Pizza spéciale");
-        },
-      },
-      "Commander"
-    )
-  ),
-  createElement(
-    "li",
-    null,
-    "Pizza reine",
-    " ",
-    createElement(
-      "button",
-      {
-        onclick: () => {
-          console.log("Pizza reine");
-        },
-      },
-      "+"
-    )
-  ),
-  createElement(
-    "li",
-    null,
-    "Pizza 4 fromages",
-    " ",
-    createElement(
-      "button",
-      {
-        onclick: () => {
-          console.log("Pizza reine");
-        },
-      },
-      "+"
-    )
-  ),
-  createElement(
-    "li",
-    null,
-    "Pizza chorizo",
-    " ",
-    createElement(
-      "button",
-      {
-        onclick: () => {
-          console.log("pizza");
+          console.log(pizza);
         },
       },
       "+"
     )
   )
 );
+
+export const PizzaList = createElement("ul", null, ...pizzas);
