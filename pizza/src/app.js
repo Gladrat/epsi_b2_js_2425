@@ -19,7 +19,7 @@ function renderApp() {
     Navigation,
     createElement("h1", null, `Hello ${state.title}`),
     createElement("p", null, "Carte des pizzas :"),
-    PizzaList,
+    PizzaList(state),
     createElement("p", null, `Votre sélection (${state.pizzaCount}) :`),
     createElement(
       "ul",

@@ -9,7 +9,8 @@ const pizzasDatas = [
   "Pizza montagnarde",
 ];
 
-const pizzas = pizzasDatas.map((pizza) =>
+export function PizzaList(state) {
+  const pizzas = pizzasDatas.map((pizza) =>
     createElement(
       "li",
       null,
@@ -28,4 +29,5 @@ const pizzas = pizzasDatas.map((pizza) =>
     )
   );
 
-  export const PizzaList = createElement("ul", null, ...pizzas);
+  return createElement("ul", null, ...pizzas);
+}
